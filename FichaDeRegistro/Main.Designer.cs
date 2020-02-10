@@ -101,6 +101,15 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Delete = new System.Windows.Forms.Button();
             this.Reload = new System.Windows.Forms.Button();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.PersonalData.SuspendLayout();
             this.DataPersonal.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -124,6 +133,7 @@
             this.groupBox14.SuspendLayout();
             this.View.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox19.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -588,6 +598,7 @@
             // 
             // DataEmployee
             // 
+            this.DataEmployee.Controls.Add(this.groupBox19);
             this.DataEmployee.Controls.Add(this.groupBox18);
             this.DataEmployee.Location = new System.Drawing.Point(4, 22);
             this.DataEmployee.Name = "DataEmployee";
@@ -787,6 +798,104 @@
             this.Reload.UseVisualStyleBackColor = true;
             this.Reload.Click += new System.EventHandler(this.Reload_Click);
             // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.label24);
+            this.groupBox19.Controls.Add(this.label23);
+            this.groupBox19.Controls.Add(this.label22);
+            this.groupBox19.Controls.Add(this.label21);
+            this.groupBox19.Controls.Add(this.label20);
+            this.groupBox19.Controls.Add(this.label19);
+            this.groupBox19.Controls.Add(this.label18);
+            this.groupBox19.Controls.Add(this.label1);
+            this.groupBox19.Location = new System.Drawing.Point(6, 174);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(756, 284);
+            this.groupBox19.TabIndex = 20;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Documentos aprobatorios que acompañan:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(426, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "(  )* Copia de acta de nacimiento certificada por oficial del registro civil ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(11, 42);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(127, 16);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "(  )  Copia del CURP";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(12, 58);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(351, 16);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "(  )  Copia de cedula del registro federal de contribuyentes";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(12, 74);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(244, 16);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "(  )* Copia de comprobante de domicilio";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(12, 90);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(203, 16);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "(  )  Copia de titulo de licenciatura";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(11, 106);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(353, 16);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "(  )  Copia del comprobante del grado maximo de estudios";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(12, 122);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(323, 16);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "(  )  Fotocopia del pasaporte y FM3 (para extranjeros)";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(12, 138);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(532, 16);
+            this.label24.TabIndex = 8;
+            this.label24.Text = "(  )  Copia de identificación oficial (IFE, pasaporte, cartilla, cedula profesion" +
+    "al, credencial)";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -838,6 +947,8 @@
             this.groupBox14.PerformLayout();
             this.View.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -917,6 +1028,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.Button Reload;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label1;
     }
 }
 
