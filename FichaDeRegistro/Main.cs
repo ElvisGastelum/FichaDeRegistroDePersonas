@@ -21,53 +21,11 @@ namespace FichaDeRegistro
 
         private void App_Load(object sender, EventArgs e)
         {
-            LoadMaskedTextBox();
+            mainController.LoadMaskedTextBox(CodigoDeEmpleado, FechaDeNacimiento, toolTip1);
             sexoMasculino.Checked = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
             dataGridView1.DataSource = mainController.GetList();
-        }
-
-        private void LoadMaskedTextBox()
-        {
-            CodigoDeEmpleado.Mask = "0 0 0 0 0 0 0 0 0 0";
-
-            CodigoDeEmpleado.MaskInputRejected += new MaskInputRejectedEventHandler(maskedTextBox1_MaskInputRejected);
-            CodigoDeEmpleado.KeyDown += new KeyEventHandler(maskedTextBox1_KeyDown);
-
-            FechaDeNacimiento.Mask = "00 / 00 / 0000";
-
-            FechaDeNacimiento.MaskInputRejected += new MaskInputRejectedEventHandler(maskedTextBox1_MaskInputRejected);
-            FechaDeNacimiento.KeyDown += new KeyEventHandler(maskedTextBox1_KeyDown);
-        }
-
-        void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            if (CodigoDeEmpleado.MaskFull)
-            {
-                toolTip1.ToolTipTitle = "Ingreso excesivo";
-                toolTip1.Show("No se pueden ingresar mas caracteres", CodigoDeEmpleado, 0, -20, 5000);
-            }
-            else if (e.Position == CodigoDeEmpleado.Mask.Length)
-            {
-                toolTip1.ToolTipTitle = "Ingreso excesivo";
-                toolTip1.Show("No se pueden agregar mas caracteres al final de la linea", CodigoDeEmpleado, 0, -20, 5000);
-            }
-            else
-            {
-                toolTip1.ToolTipTitle = "Ingreso incorrecto";
-                toolTip1.Show("Solo puedes agregar numeros (0-9) en esta celda", CodigoDeEmpleado, 0, -20, 5000);
-            }
-        }
-
-        void maskedTextBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            toolTip1.Hide(CodigoDeEmpleado);
-        }
-
-        private void LoadTable()
-        {
-            mainController.SetList(((BindingList<PersonModel>)dataGridView1.DataSource));
         }
 
         private void SaveData_Click(object sender, EventArgs e)
@@ -90,7 +48,6 @@ namespace FichaDeRegistro
                         RFC.Text
                     )
                 );
-            LoadTable();
         }
 
         private string Sexo() { return sexoMasculino.Checked ? "Masculino" : "Femenino"; }
@@ -99,10 +56,13 @@ namespace FichaDeRegistro
         {
             try
             {
-                if (dataGridView1.SelectedRows[0].Index < ((BindingList<PersonModel>)dataGridView1.DataSource).Count)
+                var List = (BindingList<PersonModel>)dataGridView1.DataSource;
+                var SelectedRow = dataGridView1.SelectedRows[0].Index;
+
+                if (SelectedRow < List.Count)
                 {
-                    ((BindingList<PersonModel>)dataGridView1.DataSource).RemoveAt(dataGridView1.SelectedRows[0].Index);
-                    mainController.SetList(((BindingList<PersonModel>)dataGridView1.DataSource));
+                    List.RemoveAt(SelectedRow);
+                    mainController.SetList(List);
                 }
             }
             catch (Exception ex)
